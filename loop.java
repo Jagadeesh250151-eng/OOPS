@@ -1,6 +1,6 @@
 package jagaproject;
 
-public class loop {
+public class forloop {
 
 	public static void main(String[] args) {
 		int N=10;
