@@ -1,0 +1,19 @@
+class Mobile {
+    void notification() {
+        System.out.println("New notification");
+    }
+}
+
+class Android extends Mobile {
+    @Override
+    void notification() {
+        System.out.println("Android notification received");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Mobile m = new Android();
+        m.notification();
+    }
+}
