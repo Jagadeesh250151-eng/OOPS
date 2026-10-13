@@ -1,8 +1,16 @@
-text = "education"
-count = 0
+public class Main {
+    public static void main(String[] args) {
+        String text = "education";
+        int count = 0;
 
-for ch in text:
-    if ch in "aeiou":
-        count += 1
+        for (int i = 0; i < text.length(); i++) {
+            char ch = text.charAt(i);
 
-print("Vowels =", count)
+            if ("aeiou".indexOf(ch) != -1) {
+                count++;
+            }
+        }
+
+        System.out.println("Vowels = " + count);
+    }
+}
