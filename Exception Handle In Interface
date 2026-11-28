@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+interface Calculator {
+    int add(int a, int b) throws Exception;
+}
+
+class CalculatorImpl implements Calculator {
+    public int add(int a, int b) throws Exception {
+        if (a < 0 || b < 0) {
+            throw new Exception("Numbers must be non-negative");
+        }
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        CalculatorImpl obj = new CalculatorImpl();
+
+        for (int i = 0; i < 2; i++) {
+            try {
+                System.out.print("Enter first number: ");
+                int a = sc.nextInt();
+
+                System.out.print("Enter second number: ");
+                int b = sc.nextInt();
+
+                System.out.println("Sum = " + obj.add(a, b));
+            } catch (Exception e) {
+                System.out.println("Exception caught: " + e.getMessage());
+            }
+        }
+    }
+}
